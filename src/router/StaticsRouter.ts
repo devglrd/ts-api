@@ -8,9 +8,9 @@ class StaticsRouter {
     router: Router;
 
 
-    constructor(){
+    constructor() {
         //Affect to StaticsRouter.router Router of express
-        this.router= Router();
+        this.router = Router();
         //loads Routes
         this.routes();
     }
@@ -19,7 +19,7 @@ class StaticsRouter {
      * showHome
      */
     public showHome(req: Request, res: Response): void {
-        res.send("Hello World");
+        res.json({Hello: "World"});
     }
 
     /**
@@ -30,6 +30,7 @@ class StaticsRouter {
     }
 
 }
+
 //instance of staticsRouter Class
 const staticsRoutes = new StaticsRouter();
 export default staticsRoutes.router;
